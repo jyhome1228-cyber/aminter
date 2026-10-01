@@ -600,3 +600,50 @@ button {
     justify-content: space-between;
   }
 }
+
+
+/* Official AM INTERNATIONAL wordmark */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.brand img {
+  display: block;
+  width: clamp(170px, 16vw, 250px);
+  height: auto;
+}
+
+.hero-logo {
+  display: block;
+  width: min(100%, 1460px);
+  height: auto;
+}
+
+.footer-brand img {
+  display: block;
+  width: clamp(220px, 27vw, 430px);
+  height: auto;
+  filter: invert(1);
+}
+
+@media (max-width: 620px) {
+  .brand img {
+    width: 164px;
+  }
+
+  .hero-logo {
+    width: 100%;
+  }
+
+  .footer-brand img {
+    width: min(78vw, 300px);
+  }
+}
