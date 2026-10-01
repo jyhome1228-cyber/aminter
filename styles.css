@@ -647,3 +647,171 @@ button {
     width: min(78vw, 300px);
   }
 }
+
+
+/* AM INTERNATIONAL footer — aligned with Daily Habit footer structure */
+.site-footer {
+  min-height: 0;
+  margin: 0;
+  padding: clamp(56px, 7vw, 88px) var(--page-x) 24px;
+  display: block;
+  background: #171517;
+  color: #fff;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: clamp(32px, 4vw, 64px);
+  padding-bottom: clamp(48px, 6vw, 72px);
+}
+
+.footer-brand-block {
+  min-width: 0;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.footer-logo img {
+  display: block;
+  width: clamp(220px, 23vw, 360px);
+  height: auto;
+  filter: invert(1);
+}
+
+.footer-tagline {
+  margin: 14px 0 34px;
+  color: #8e898f;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.footer-contact > span,
+.footer-column strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #77727a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #aaa6ad;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-contact a {
+  color: inherit;
+}
+
+.footer-contact a:hover {
+  color: #fff;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-column a {
+  color: #aaa6ad;
+  font-size: 12px;
+  letter-spacing: .01em;
+  transition: color .18s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: start;
+  padding-top: 20px;
+  border-top: 1px solid #302d33;
+  color: #77727a;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom p:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 24px;
+  }
+
+  .footer-brand-block {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .footer-bottom p:last-child {
+    text-align: left;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-footer {
+    min-height: 0;
+    padding: 48px 20px 24px;
+    align-items: initial;
+    flex-direction: initial;
+    justify-content: initial;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding-bottom: 36px;
+  }
+
+  .footer-brand-block {
+    grid-column: 1 / -1;
+    padding-bottom: 32px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #302d33;
+  }
+
+  .footer-column {
+    padding: 0 0 28px;
+  }
+
+  .footer-column:last-child {
+    grid-column: 1 / -1;
+    padding-top: 28px;
+    border-top: 1px solid #302d33;
+  }
+
+  .footer-logo img {
+    width: min(78vw, 300px);
+  }
+
+  .footer-bottom {
+    padding-top: 18px;
+  }
+}
