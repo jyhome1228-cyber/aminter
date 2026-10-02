@@ -1109,3 +1109,86 @@ img,svg{display:block;max-width:100%}
   .home-slide .home-copy span{max-width:88%;font-size:13px;line-height:1.6}
   .brand-visual-grid.single img{aspect-ratio:1/1}
 }
+
+
+/* Brand showcase two-column layout */
+.brand-showcase{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+  gap:clamp(42px,6vw,92px);
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:var(--header-h);
+}
+.brand-showcase.alt{
+  background:var(--soft);
+  box-shadow:0 0 0 100vmax var(--soft);
+  clip-path:inset(0 -100vmax);
+}
+.brand-showcase.reverse .brand-showcase-visual{order:2}
+.brand-showcase.reverse .brand-showcase-content{order:1}
+.brand-showcase-visual{
+  margin:0;
+  overflow:hidden;
+  background:#eee;
+}
+.brand-showcase-visual img{
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  display:block;
+}
+.brand-showcase-content{
+  max-width:520px;
+}
+.brand-eyebrow{
+  display:block;
+  margin-bottom:24px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:650;
+  letter-spacing:.12em;
+}
+.brand-showcase-content h2{
+  margin:0 0 34px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(34px,3.2vw,48px);
+  font-weight:400;
+  line-height:.96;
+  letter-spacing:-.055em;
+}
+.brand-showcase-content strong{
+  display:block;
+  margin-bottom:18px;
+  font-size:clamp(17px,1.35vw,20px);
+  font-weight:500;
+  line-height:1.5;
+}
+.brand-showcase-content p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.9;
+}
+
+@media(max-width:980px){
+  .brand-showcase{
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+  .brand-showcase-content h2{font-size:36px}
+}
+@media(max-width:720px){
+  .brand-showcase{
+    grid-template-columns:1fr;
+    gap:28px;
+    padding-top:56px;
+    padding-bottom:64px;
+  }
+  .brand-showcase.reverse .brand-showcase-visual,
+  .brand-showcase.reverse .brand-showcase-content{order:initial}
+  .brand-showcase-content{max-width:none}
+  .brand-showcase-visual img{aspect-ratio:4 / 3}
+  .brand-eyebrow{margin-bottom:18px}
+  .brand-showcase-content h2{margin-bottom:24px;font-size:34px}
+}
