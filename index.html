@@ -10,7 +10,7 @@
   <title>AM INTERNATIONAL — Brand · Commerce · Distribution</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261002-3" />
 </head>
 <body class="home">
   <a class="skip-link" href="#main">본문 바로가기</a>
@@ -35,14 +35,39 @@
   </header>
 
   <main id="main">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="home-visual" role="img" aria-label="AM INTERNATIONAL office visual" style="--home-image:url('https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261002-002511-joshua-earle-cubiyebh-yy-unsplash-56895a72.webp')"></div>
-      <div class="home-overlay"></div>
+    
+    <section class="home-hero" aria-label="AM INTERNATIONAL 메인 비주얼" data-home-slider>
+      <div class="home-slide is-active" data-home-slide style="--slide-image:url('https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261002-070908-christin-hume-0mof-fe0w0a-unsplash-e24038fa.webp')">
+        <div class="home-overlay"></div>
+        <div class="home-copy">
+          <p>BRAND STRATEGY</p>
+          <h1>브랜드의 시작을<br />설계합니다.</h1>
+          <span>기획부터 운영 구조까지, 브랜드가 시장에서 움직일 수 있는 기반을 만듭니다.</span>
+        </div>
+      </div>
 
-      <div class="home-copy">
-        <p>BRAND · COMMERCE · DISTRIBUTION</p>
-        <h1 id="home-title">We build, operate<br />and grow brands.</h1>
-        <span>브랜드를 만들고, 운영하고, 시장에 연결합니다.</span>
+      <div class="home-slide" data-home-slide style="--slide-image:url('https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261002-070909-leire-cavia-8ee-rkfj-rm-unsplash-d92320f5.webp')">
+        <div class="home-overlay"></div>
+        <div class="home-copy">
+          <p>CONTENT &amp; LIFESTYLE</p>
+          <h1>브랜드와 소비자가<br />만나는 장면을 만듭니다.</h1>
+          <span>콘텐츠와 경험을 통해 일상 속에서 선택되는 브랜드 흐름을 설계합니다.</span>
+        </div>
+      </div>
+
+      <div class="home-slide" data-home-slide style="--slide-image:url('https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261002-002511-joshua-earle-cubiyebh-yy-unsplash-56895a72.webp')">
+        <div class="home-overlay"></div>
+        <div class="home-copy">
+          <p>COMMERCE &amp; DISTRIBUTION</p>
+          <h1>판매와 확장까지<br />연결합니다.</h1>
+          <span>커머스와 유통까지 하나의 흐름으로 연결해 브랜드의 성장을 운영합니다.</span>
+        </div>
+      </div>
+
+      <div class="home-slider-ui" aria-label="메인 배너 선택">
+        <button class="home-dot is-active" type="button" data-home-dot="0" aria-label="1번 배너 보기"></button>
+        <button class="home-dot" type="button" data-home-dot="1" aria-label="2번 배너 보기"></button>
+        <button class="home-dot" type="button" data-home-dot="2" aria-label="3번 배너 보기"></button>
       </div>
 
       <a class="home-more" href="about.html">
@@ -103,6 +128,6 @@
       <p>© <span data-year></span> AM INTERNATIONAL. ALL RIGHTS RESERVED.</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=20261002-3"></script>
 </body>
 </html>
