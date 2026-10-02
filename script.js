@@ -69,3 +69,38 @@ document.querySelectorAll("[data-mail-form]").forEach((form) => {
     window.location.href = mailto;
   });
 });
+
+
+const homeSlider = document.querySelector("[data-home-slider]");
+
+if (homeSlider) {
+  const slides = [...homeSlider.querySelectorAll("[data-home-slide]")];
+  const dots = [...homeSlider.querySelectorAll("[data-home-dot]")];
+  let current = 0;
+  let timer;
+
+  const showSlide = (index) => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle("is-active", i === current));
+    dots.forEach((dot, i) => {
+      const active = i === current;
+      dot.classList.toggle("is-active", active);
+      dot.setAttribute("aria-current", active ? "true" : "false");
+    });
+  };
+
+  const start = () => {
+    window.clearInterval(timer);
+    timer = window.setInterval(() => showSlide(current + 1), 5500);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      start();
+    });
+  });
+
+  showSlide(0);
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) start();
+}
