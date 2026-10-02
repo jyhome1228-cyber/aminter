@@ -224,12 +224,6 @@ img,svg{display:block;max-width:100%}
 .page-hero > *{
   width:100%;
 }
-.page-no{
-  margin-bottom:clamp(56px,6vw,82px);
-  color:var(--muted);
-  font-size:10px;
-  letter-spacing:.1em;
-}
 .page-kicker{
   margin:0 0 26px;
   color:var(--muted);
@@ -765,9 +759,6 @@ img,svg{display:block;max-width:100%}
     padding-top:48px;
     padding-bottom:46px;
   }
-  .page-no{
-    margin-bottom:42px;
-  }
   .page-hero h1{font-size:30px}
   .page-hero h1 br{display:none}
 
@@ -1057,3 +1048,12 @@ img,svg{display:block;max-width:100%}
     width:100%;
   }
 }
+
+/* About refinement */
+.about-page .page-hero{padding-top:clamp(92px,10vw,150px);padding-bottom:clamp(70px,8vw,110px)}
+.about-page .page-kicker{margin-bottom:34px}
+.about-page .page-hero h1{max-width:920px;font-size:clamp(38px,5vw,72px);font-weight:450;line-height:1.06;letter-spacing:-.065em}
+.about-page .split-intro{padding-top:clamp(78px,8vw,120px);padding-bottom:clamp(78px,8vw,120px)}
+.about-page .about-visual{width:min(calc(100% - (var(--page-x) * 2)),1440px)}
+.about-page .about-visual img{aspect-ratio:16/9}
+@media(max-width:620px){.about-page .page-hero{padding-top:64px;padding-bottom:56px}.about-page .page-kicker{margin-bottom:24px}.about-page .page-hero h1{font-size:38px;line-height:1.12}.about-page .split-intro{padding-top:64px;padding-bottom:64px}.about-page .about-visual img{aspect-ratio:4/3}.about-page .body-copy p{font-size:15px;line-height:1.75}}
